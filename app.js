@@ -9,4 +9,10 @@ console.log(jsonFORM);
 jsonFORM.addEventListener("render",function(event){
     event.preventDefault();
     console.log(jsonFORM.jsonData.value);
+    try {
+        const obj = JSON.parse(jsonFORM.jsonData.value);
+        
+    } catch (error) {
+       console.log("Ignore") 
+    }
 })
